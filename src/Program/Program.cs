@@ -6,7 +6,10 @@ namespace PII_Game_Of_Life
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Tablero gameBoard = new Tablero(ReadFile.OpenFile(@"../../assets/board.txt"));
+            int boardHeight = gameBoard.getHeight();
+            int boardWidth = gameBoard.getWidth();
+            ImprimirTablero.Imprimir(gameBoard, boardHeight, boardWidth);
         }
     }
 }
